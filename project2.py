@@ -249,7 +249,7 @@ plt.show()
 '''
 
 
-'''y = np.zeros(1440000)
+y = np.zeros(1440000)
 y[57000] = 1
 y[117000] = 1
 y[170000] = 1
@@ -278,9 +278,9 @@ plt.ylim((0,16))
 plt.xlabel('False Positive')
 plt.ylabel('True Positive')
 plt.plot(x, y)
-plt.show()'''
+plt.show()
 """ ============================ A ===================================== """
-'''window = 1000
+window = 1000
 
 w_train = []
 y_train = np.zeros((10,len(data_test)))
@@ -319,8 +319,8 @@ for i in range(len(data_test)):
 end1 = time()
 soundfile.write('output_signal.wav', yout_signal, 48000)
 soundfile.write('output_noise.wav', yout_noise, 48000)
-'''
-'''y1 = plotswave(100)
+
+y1 = plotswave(100)
 y2 = plotswave(500)
 y3 = plotswave(600)
 y4 = plotswave(800)
@@ -341,10 +341,10 @@ plt.figure(4)
 plt.plot(y4)
 plt.xlabel('Samples')
 
-plt.show()'''
+plt.show()
 
 """ ============================ B ===================================== """
-'''test = sprt.SPRTBinomial(h0 = 0.5, h1 = 0.5, alpha = 0.05, beta = 0.2, values = data_noise)
+test = sprt.SPRTBinomial(h0 = 0.5, h1 = 0.5, alpha = 0.05, beta = 0.2, values = data_noise)
 test.plot()'''
 
 '''sns.kdeplot(data_noise)
@@ -353,7 +353,7 @@ plt.show()'''
 plt.plot(a)
 plt.show()
 a = em(data_noise, [0.6, 0.5])
-a = stats.ks_2samp(data_test[0:100], data_noise)'''
+a = stats.ks_2samp(data_test[0:100], data_noise)
 
 auto1 = np.correlate([1,1,1,1,1,1,1,1,1,1], [1,1,1,1,1,1,1,1,1,1], mode = 'full')
 
@@ -362,38 +362,14 @@ plt.plot(auto1)
 #plt.plot(data_train1[0])
 plt.show()
 
-'''y = np.zeros(1440000)
-#y[44855:45000] = 1
-#y[136956:140000] = 1
-#y[169712:172000] = 1
-#y[181521:185000] = 1
-y[226086:230000] = 1
-y[251835:253000] = 1
-#y[284516:285000] = 1
-#y[332052:333000] = 1
-#y[357801:358000] = 1
-#y[375627:378000] = 1
-y[415240:426000] = 1
-#y[438018:439000] = 1
-#y[513284:514000] = 1
-y[563791:575000] = 1
-#y[597462:598000] = 1
-#y[640046:641000] = 1
-#y[698476:699000] = 1
-y[752945:754000] = 1
-y[889611:905000] = 1
-#y[996567:1013000] = 1
-y[1178340:1180000] = 1
-#y[1239710:1240000] = 1
-#y[1415070:1416000] = 1
 
 plt.plot(y)
 plt.xlabel('Samples')
-plt.show()'''
+plt.show()
 
 
 
-'''x1 = [0, 0, 3, 7, 9]
+x1 = [0, 0, 3, 7, 9]
 y1 = [0, 8, 12, 13, 14]
 x2 = [0, 0, 1, 1, 2, 3, 9]
 y2 = [0, 13, 13, 14, 14, 15, 15]
@@ -404,7 +380,7 @@ plt.ylabel('True Positive')
 plt.plot(x1, y1, label = 'CUSUM')
 plt.plot(x2, y2, label = 'NLMS')
 plt.legend()
-plt.show()'''
+plt.show()
 
 start2 = time()
 ta, tai, taf, amp = detect_cusum(data_test, 2000, 10000, True, True)
@@ -418,24 +394,3 @@ y1 = [time1, time2]
 plt.bar(x1,y1)
 plt.ylabel("Time(sec)")
 plt.show()
-a = 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
